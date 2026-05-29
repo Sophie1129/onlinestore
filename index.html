@@ -1,8 +1,4 @@
-# Beautiful Responsive Online Store Upgrade
 
-Replace your old HTML with this improved version.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -199,7 +195,7 @@ Replace your old HTML with this improved version.
     🛒 Cart Items:
     <span id="cart-count">0</span>
     |
-    Total: $
+    Total: NT$
     <span id="total-price">0.00</span>
   </div>
 
@@ -229,7 +225,7 @@ Replace your old HTML with this improved version.
 
           <h2>Correction Tape</h2>
 
-          <p class="price">$20.00</p>
+          <p class="price">NT$20/p>
 
           <p>
             Smooth and easy-to-use correction tape for school work.
@@ -243,7 +239,7 @@ Replace your old HTML with this improved version.
 
       </div>
 
-      <!-- Product 2 -->
+      <<!-- Product 2 -->
       <div class="product-card">
 
         <img src="https://images.unsplash.com/photo-1576502200916-3808e07386a5?q=80&w=1000&auto=format&fit=crop" alt="Highlighter Pen">
@@ -252,7 +248,7 @@ Replace your old HTML with this improved version.
 
           <h2>Highlighter Pen</h2>
 
-          <p class="price">$15.00</p>
+          <p class="price">NT$15</p>
 
           <p>
             Bright colorful highlighters perfect for studying.
@@ -264,8 +260,32 @@ Replace your old HTML with this improved version.
 
         </div>
 
+      </div>
+
       <!-- Product 3 -->
       <div class="product-card">
+
+        <img src="https://images.unsplash.com/photo-1616628182509-6cb0f5d91c4f?q=80&w=1000&auto=format&fit=crop" alt="Eraser">
+
+        <div class="product-content">
+
+          <h2>Eraser</h2>
+
+          <p class="price">NT$12</p>
+
+          <p>
+            Soft and clean eraser perfect for school writing.
+          </p>
+
+          <button onclick="addToCart('Eraser', 12.00)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+    <div class="product-card">
 
         <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1000&auto=format&fit=crop" alt="Eraser">
 
@@ -273,7 +293,7 @@ Replace your old HTML with this improved version.
 
           <h2>Eraser</h2>
 
-          <p class="price">$12.00</p>
+          <p class="price">NTNT$12>
 
           <p>
             Soft and clean eraser perfect for school writing.
@@ -298,7 +318,7 @@ Replace your old HTML with this improved version.
 
           <h2>Eraser</h2>
 
-          <p class="price">$12.00</p>
+          <p class="price">NT$NT$12
 
           <p>
             Soft and clean eraser perfect for school writing.
@@ -334,9 +354,13 @@ Replace your old HTML with this improved version.
 
       <h2>Checkout</h2>
 
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <for<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
         <input
+          type="hidden"
+          name="store_email"
+          value="sophie2010119929@gmail.com"
+        >      <input
           type="text"
           name="customer_name"
           placeholder="Enter your name"
@@ -391,9 +415,7 @@ Replace your old HTML with this improved version.
 
       let li = document.createElement("li");
 
-      li.innerText = productName + " - $" + productPrice;
-
-      cartItems.appendChild(li);
+      li.ili.innerText = productName + " - NT$" + productPrice;    cartItems.appendChild(li);
     }
 
     function clearCart()
@@ -435,13 +457,3 @@ Replace your old HTML with this improved version.
 </body>
 </html>
 ```
-
-Now your website is:
-
-* More beautiful
-* Easier to read
-* Mobile friendly
-* Computer friendly
-* Responsive design
-* Professional looking
-* Better for your final project 😄
