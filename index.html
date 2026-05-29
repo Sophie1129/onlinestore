@@ -1,9 +1,12 @@
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Blue Breeze Stationery</title>
@@ -24,16 +27,15 @@
     }
 
     header{
-      background:linear-gradient(135deg,#7fb3ff,#b9d8ff);
-      padding:50px 20px;
+      background:linear-gradient(135deg,#8cbcff,#cfe4ff);
       text-align:center;
-      color:#0d3c75;
+      padding:60px 20px;
+      color:#12457a;
     }
 
     header h1{
       font-size:55px;
       margin-bottom:10px;
-      letter-spacing:2px;
     }
 
     header p{
@@ -49,9 +51,9 @@
 
     .section-title{
       text-align:center;
+      font-size:38px;
       margin-bottom:30px;
       color:#1c4e8f;
-      font-size:38px;
     }
 
     #searchInput{
@@ -76,6 +78,7 @@
       overflow:hidden;
       box-shadow:0 5px 15px rgba(0,0,0,0.1);
       transition:0.3s;
+      padding-bottom:20px;
     }
 
     .product-card:hover{
@@ -86,32 +89,45 @@
       width:100%;
       height:260px;
       object-fit:contain;
-      background:#f7fbff;
+      background:#f8fbff;
       padding:20px;
     }
 
     .product-content{
-      padding:25px;
+      padding:20px;
       text-align:center;
     }
 
     .product-content h2{
-      color:#144a88;
+      color:#174a88;
       margin-bottom:10px;
     }
 
     .price{
+      color:#4f83d1;
       font-size:30px;
-      color:#4a7ed9;
       font-weight:bold;
-      margin-bottom:15px;
+      margin-bottom:10px;
+    }
+
+    .quantity-box{
+      margin-top:15px;
+    }
+
+    .quantity-box input{
+      width:80px;
+      padding:10px;
+      border-radius:8px;
+      border:1px solid #ccc;
+      text-align:center;
+      font-size:16px;
     }
 
     button{
       background:#6ea8ff;
       color:white;
       border:none;
-      padding:12px 20px;
+      padding:12px;
       border-radius:10px;
       width:100%;
       font-size:16px;
@@ -121,27 +137,10 @@
     }
 
     button:hover{
-      background:#4e8df0;
+      background:#4f8df0;
     }
 
-    .cart-box{
-      background:white;
-      margin-top:50px;
-      padding:30px;
-      border-radius:20px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .cart-box h2{
-      color:#1c4e8f;
-      margin-bottom:20px;
-      text-align:center;
-    }
-
-    #cart-items{
-      margin-left:20px;
-    }
-
+    .cart-box,
     .checkout{
       background:white;
       margin-top:50px;
@@ -150,10 +149,15 @@
       box-shadow:0 5px 15px rgba(0,0,0,0.1);
     }
 
+    .cart-box h2,
     .checkout h2{
       text-align:center;
-      color:#1c4e8f;
       margin-bottom:20px;
+      color:#1c4e8f;
+    }
+
+    #cart-items{
+      margin-left:20px;
     }
 
     form{
@@ -172,11 +176,11 @@
     }
 
     footer{
-      margin-top:50px;
-      background:#d8e8ff;
+      background:#dcecff;
       text-align:center;
       padding:25px;
-      color:#144a88;
+      margin-top:50px;
+      color:#174a88;
       font-size:18px;
     }
 
@@ -187,7 +191,7 @@
       }
 
       .section-title{
-        font-size:30px;
+        font-size:28px;
       }
 
     }
@@ -226,7 +230,7 @@
       <!-- Product 1 -->
       <div class="product-card">
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Correction_tape.jpg" alt="Correction Tape">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Correction_tape.jpg">
 
         <div class="product-content">
 
@@ -240,7 +244,15 @@
             Smooth correction tape for clean writing.
           </p>
 
-          <button onclick="addToCart('Correction Tape',20)">
+          <div class="quantity-box">
+
+            Quantity:
+
+            <input type="number" id="qty1" value="1" min="1">
+
+          </div>
+
+          <button onclick="addToCart('Correction Tape',20,'qty1')">
             Add to Cart
           </button>
 
@@ -251,7 +263,7 @@
       <!-- Product 2 -->
       <div class="product-card">
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Highlighter_pens.jpg" alt="Highlighter">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Highlighter_pens.jpg">
 
         <div class="product-content">
 
@@ -265,7 +277,15 @@
             Colorful highlighters perfect for studying.
           </p>
 
-          <button onclick="addToCart('Highlighter Pen',15)">
+          <div class="quantity-box">
+
+            Quantity:
+
+            <input type="number" id="qty2" value="1" min="1">
+
+          </div>
+
+          <button onclick="addToCart('Highlighter Pen',15,'qty2')">
             Add to Cart
           </button>
 
@@ -276,7 +296,7 @@
       <!-- Product 3 -->
       <div class="product-card">
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Eraser.jpg" alt="Eraser">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Eraser.jpg">
 
         <div class="product-content">
 
@@ -290,7 +310,15 @@
             Soft eraser with clean and smooth erasing.
           </p>
 
-          <button onclick="addToCart('Eraser',12)">
+          <div class="quantity-box">
+
+            Quantity:
+
+            <input type="number" id="qty3" value="1" min="1">
+
+          </div>
+
+          <button onclick="addToCart('Eraser',12,'qty3')">
             Add to Cart
           </button>
 
@@ -337,7 +365,17 @@
         Checkout
       </h2>
 
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        onsubmit="showMessage()"
+      >
+
+        <input
+          type="hidden"
+          name="_replyto"
+          value="Sophie2010119929@gmail.com"
+        >
 
         <input
           type="text"
@@ -353,9 +391,9 @@
           required
         >
 
-        <select name="product_name">
+        <select name="product_name" required>
 
-          <option>
+          <option value="">
             Select Product
           </option>
 
@@ -392,6 +430,10 @@
 
       </form>
 
+      <br>
+
+      <p id="success-message" style="color:green; text-align:center; font-weight:bold;"></p>
+
     </div>
 
   </div>
@@ -408,21 +450,32 @@
 
     let totalPrice = 0;
 
-    function addToCart(productName,productPrice)
+    function addToCart(productName,productPrice,quantityId)
     {
-      cartCount++;
+      let quantity =
+      parseInt(document.getElementById(quantityId).value);
 
-      totalPrice += productPrice;
+      cartCount += quantity;
 
-      document.getElementById("cart-count").innerText = cartCount;
+      totalPrice += productPrice * quantity;
 
-      document.getElementById("total-price").innerText = totalPrice;
+      document.getElementById("cart-count").innerText =
+      cartCount;
+
+      document.getElementById("total-price").innerText =
+      totalPrice;
 
       let li = document.createElement("li");
 
-      li.innerText = productName + " - NT$" + productPrice;
+      li.innerText =
+      productName +
+      " x " +
+      quantity +
+      " - NT$" +
+      (productPrice * quantity);
 
-      document.getElementById("cart-items").appendChild(li);
+      document.getElementById("cart-items")
+      .appendChild(li);
     }
 
     function clearCart()
@@ -440,13 +493,17 @@
 
     function searchProducts()
     {
-      let input = document.getElementById("searchInput").value.toLowerCase();
+      let input =
+      document.getElementById("searchInput")
+      .value.toLowerCase();
 
-      let cards = document.getElementsByClassName("product-card");
+      let cards =
+      document.getElementsByClassName("product-card");
 
       for(let i = 0; i < cards.length; i++)
       {
-        let text = cards[i].innerText.toLowerCase();
+        let text =
+        cards[i].innerText.toLowerCase();
 
         if(text.includes(input))
         {
@@ -457,6 +514,12 @@
           cards[i].style.display = "none";
         }
       }
+    }
+
+    function showMessage()
+    {
+      document.getElementById("success-message").innerText =
+      "Thank you! Your order has been received successfully.";
     }
 
   </script>
