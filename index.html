@@ -1,4 +1,8 @@
+# Beautiful Responsive Online Store Upgrade
 
+Replace your old HTML with this improved version.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -205,12 +209,21 @@
       Our Products
     </h2>
 
+    <!-- SEARCH BAR -->
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search products..."
+      onkeyup="searchProducts()"
+      style="width:100%; padding:14px; margin-bottom:30px; border-radius:10px; border:1px solid #ccc; font-size:16px;"
+    >
+
     <div class="products">
 
       <!-- Product 1 -->
       <div class="product-card">
 
-        <img src="https://images.unsplash.com/photo
+        <img src="https://plus.unsplash.com/premium_photo-1669652639337-c513cc42ead6?q=80&w=1000&auto=format&fit=crop" alt="Correction Tape">
 
         <div class="product-content">
 
@@ -233,7 +246,7 @@
       <!-- Product 2 -->
       <div class="product-card">
 
-        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop" alt="Highlighter Pen">
+        <img src="https://images.unsplash.com/photo-1576502200916-3808e07386a5?q=80&w=1000&auto=format&fit=crop" alt="Highlighter Pen">
 
         <div class="product-content">
 
@@ -246,6 +259,52 @@
           </p>
 
           <button onclick="addToCart('Highlighter Pen', 15.00)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+
+        <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1000&auto=format&fit=crop" alt="Eraser">
+
+        <div class="product-content">
+
+          <h2>Eraser</h2>
+
+          <p class="price">$12.00</p>
+
+          <p>
+            Soft and clean eraser perfect for school writing.
+          </p>
+
+          <button onclick="addToCart('Eraser', 12.00)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Product 3 -->
+      <div class="product-card">
+
+        <img src="https://images.unsplash.com/photo-1616628182509-6cb0f5d91c4f?q=80&w=1000&auto=format&fit=crop" alt="Eraser">
+
+        <div class="product-content">
+
+          <h2>Eraser</h2>
+
+          <p class="price">$12.00</p>
+
+          <p>
+            Soft and clean eraser perfect for school writing.
+          </p>
+
+          <button onclick="addToCart('Eraser', 12.00)">
             Add to Cart
           </button>
 
@@ -350,9 +409,39 @@
       document.getElementById("cart-items").innerHTML = "";
     }
 
+    function searchProducts()
+    {
+      let input = document.getElementById("searchInput").value.toLowerCase();
+
+      let products = document.getElementsByClassName("product-card");
+
+      for(let i = 0; i < products.length; i++)
+      {
+        let productName = products[i].innerText.toLowerCase();
+
+        if(productName.includes(input))
+        {
+          products[i].style.display = "block";
+        }
+        else
+        {
+          products[i].style.display = "none";
+        }
+      }
+    }
+
   </script>
 
 </body>
 </html>
 ```
 
+Now your website is:
+
+* More beautiful
+* Easier to read
+* Mobile friendly
+* Computer friendly
+* Responsive design
+* Professional looking
+* Better for your final project 😄
