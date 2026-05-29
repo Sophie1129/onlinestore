@@ -1,4 +1,5 @@
 
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,11 +66,13 @@
 
     .products{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      
       gap:30px;
     }
 
     .product-card{
+      display:flex;
+      flex-direction:custify-content:space-between;
       background:white;
       border-radius:18px;
       overflow:hidden;
@@ -214,21 +217,16 @@
       style="width:100%; padding:14px; margin-bottom:30px; border-radius:10px; border:1px solid #ccc; font-size:16px;"
     >
 
-    <div class="products">
-
-      <!-- Product 1 -->
-      <div class="product-card">
-
-        <img src="https://plus.unsplash.com/premium_photo-1669652639337-c513cc42ead6?q=80&w=1000&auto=format&fit=crop" alt="Correction Tape">
+    <div 2817159949-195b6eb9e31a?q=80&w=1000&auto=format&fit=crop" alt="Correction Tape">
 
         <div class="product-content">
 
           <h2>Correction Tape</h2>
 
-          <p class="price">NT$20/p>
+          <p class="price">NT$20</p>
 
           <p>
-            Smooth and easy-to-use correction tape for school work.
+            Smooth and-to-use correction tape for school work.
           </p>
 
           <button onclick="addToCart('Correction Tape', 20.00)">
@@ -239,14 +237,10 @@
 
       </div>
 
-      <<!-- Product 2 -->
+      <!-- Product 2 -->
       <div class="product-card">
 
-        <img src="https://images.unsplash.com/photo-1576502200916-3808e07386a5?q=80&w=1000&auto=format&fit=crop" alt="Highlighter Pen">
-
-        <div class="product-content">
-
-          <h2>Highlighter Pen</h2>
+        <img src="https://images.unsplash.com/photo-158    <h2>Highlighter Pen</h2>
 
           <p class="price">NT$15</p>
 
@@ -255,7 +249,7 @@
           </p>
 
           <button onclick="addToCart('Highlighter Pen', 15.00)">
-            Add to Cart
+           to Cart
           </button>
 
         </div>
@@ -265,7 +259,30 @@
       <!-- Product 3 -->
       <div class="product-card">
 
-        <img src="https://images.unsplash.com/photo-1616628182509-6cb0f5d91c4f?q=80&w=1000&auto=format&fit=crop" alt="Eraser">
+        <img src="https://images.unsplash.com/photo-1630921125426-3c3cf6341a3d?q=80&w=1000&auto=format&fit=crop" alt="Eraser">
+
+        <div class="product-content">
+
+          <h2>Eraser</h2>
+
+          <p class="price">NT$12</p>
+
+          <p>
+            Soft and clean eraser perfect for school writing.
+          </p>
+
+          <button onclick="addToCart('Eraser', 12)">
+            Add to Cart
+     </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="product-card">
+
+        <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1000&auto=format&fit=crop" alt="Eraser">
 
         <div class="product-content">
 
@@ -279,29 +296,7 @@
 
           <button onclick="addToCart('Eraser', 12.00)">
             Add to Cart
-          </button>
-
-        </div>
-
-      </div>
-
-    <div class="product-card">
-
-        <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1000&auto=format&fit=crop" alt="Eraser">
-
-        <div class="product-content">
-
-          <h2>Eraser</h2>
-
-          <p class="price">NTNT$12>
-
-          <p>
-            Soft and clean eraser perfect for school writing.
-          </p>
-
-          <button onclick="addToCart('Eraser', 12.00)">
-            Add to Cart
-          </button>
+      /button>
 
         </div>
 
@@ -318,7 +313,7 @@
 
           <h2>Eraser</h2>
 
-          <p class="price">NT$NT$12
+          <p class="price">NT$12</p>
 
           <p>
             Soft and clean eraser perfect for school writing.
@@ -326,7 +321,7 @@
 
           <button onclick="addToCart('Eraser', 12.00)">
             Add to Cart
-          </button>
+          <on>
 
         </div>
 
@@ -354,13 +349,15 @@
 
       <h2>Checkout</h2>
 
-      <for<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
         <input
           type="hidden"
           name="store_email"
           value="sophie2010119929@gmail.com"
-        >      <input
+        >
+
+        <input
           type="text"
           name="customer_name"
           placeholder="Enter your name"
@@ -415,7 +412,9 @@
 
       let li = document.createElement("li");
 
-      li.ili.innerText = productName + " - NT$" + productPrice;    cartItems.appendChild(li);
+      li.innerText = productName + " - NT$" + productPrice;
+
+      cartItems.appendChild(li);
     }
 
     function clearCart()
@@ -457,3 +456,4 @@
 </body>
 </html>
 ```
+
